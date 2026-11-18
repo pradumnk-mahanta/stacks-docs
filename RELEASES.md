@@ -4,6 +4,13 @@ All notable changes and releases for Stacks are documented here. Stacks is distr
 
 ---
 
+## [0.0.5] - 2026-11-18
+
+* Added Full Support for Docker API Service
+* Added Full Support for SSH Service
+
+---
+
 ## [0.0.4] - 2026-11-01
 * Initial release of Stacks to Playstore.
 * Unified Connected Services Dashboard: Add and switch between multiple self-hosted server instances with live connection status dots.

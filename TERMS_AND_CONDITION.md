@@ -11,7 +11,7 @@ By downloading, installing, or using Stacks, you agree to be bound by these Term
 
 ### 1. Nature of the Application
 
-* **Infrastructure Client Utility:** Stacks is a native Android client application designed to interface with user-supplied container and server management infrastructure (such as Komodo, Portainer, Dockge, and Docker).
+* **Infrastructure Client Utility:** Stacks is a native Android client application designed to interface with user-supplied container and server management infrastructure (such as Komodo, Portainer, and Docker).
 * **No Cloud Hosting Provided:** Stacks does **NOT** provide, host, or operate any servers, containers, compute resources, or backend infrastructure. You are solely responsible for provisioning, operating, maintaining, and securing your own server environments and container deployments.
 * **Direct Connections:** All communication occurs directly between your Android device and the endpoints you explicitly configure.
 
@@ -20,7 +20,7 @@ By downloading, installing, or using Stacks, you agree to be bound by these Term
 ### 2. User Responsibilities & Acceptable Use
 
 * **Authorized Access:** You agree to use Stacks only with servers, networks, and container infrastructure that you own or have explicit authorization to monitor and administer.
-* **Credentials & Secrets Security:** You are responsible for maintaining the confidentiality of your server endpoints, passwords, TOTP tokens, and API credentials.
+* **Credentials & Secrets Security:** You are responsible for maintaining the confidentiality of your server endpoints, passwords, TOTP tokens, API credentials, and SSH private keys.
 * **System Actions:** Container actions (including Start, Stop, Restart, Deploy, Destroy, and interactive Terminal commands) directly affect the operating state of your host servers and running containers. You are solely responsible for all actions executed through the application.
 
 ---
@@ -28,7 +28,7 @@ By downloading, installing, or using Stacks, you agree to be bound by these Term
 ### 3. Intellectual Property
 
 * The Stacks name, logo geometry, branding, and application codebase are the intellectual property of the developer and respective open-source contributors, subject to the applicable project license.
-* Third-party trademarks, provider names, and logos (Komodo, Portainer, Dockge, Docker) belong to their respective copyright and trademark holders. Reference to them does not imply affiliation or endorsement.
+* Third-party trademarks, provider names, and logos (Komodo, Portainer, Docker) belong to their respective copyright and trademark holders. Reference to them does not imply affiliation or endorsement.
 
 ---
 

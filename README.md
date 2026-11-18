@@ -97,7 +97,7 @@ The SSH account needs permission to run Docker and Docker Compose v2. Editing fi
 
 ### Across the App
 
-* Long-press and drag dashboard service cards to change their order.
+* Long-press and drag dashboard service cards to change their order. Release to save the order for future app launches.
 * Pull down to refresh service information. Existing status and content stay visible during background refreshes.
 * Container logs refresh automatically every five seconds, with manual refresh and 100, 500, or 1,000-line views.
 * Add/Edit Service forms keep the Connect or Save button below the scrollable fields and above the keyboard. A centered spinner appears while the request is in progress.
