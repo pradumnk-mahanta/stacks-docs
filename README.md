@@ -55,7 +55,7 @@ Available operations depend on your account permissions, server configuration, a
 ### Komodo
 
 * Monitor server CPU, memory, storage, and tags. Select a server to filter its stacks.
-* Browse stacks, edit tags, and use Start, Restart, and Stop controls.
+* Browse stacks, edit tags, and use Start, Restart, and Stop controls. Choose **Delete Stack** in the stack menu to remove it from Komodo; **Destroy** remains available to take it down without deleting its record.
 * Create stacks using templates, UI-defined Compose, Git repositories, or host files.
 * Open a stack's **Details**, **Compose**, and **Environment** tabs. Edit Compose in Table or Raw mode, format YAML, and edit environment variables with values hidden by default.
 * Check for stack updates and run supported update or deployment actions.
@@ -68,7 +68,7 @@ Available operations depend on your account permissions, server configuration, a
 * Browse environments and their available CPU, memory, and container information. Select an environment to filter stacks.
 * Create stacks from UI-defined Compose or a Git repository, including repository authentication when needed.
 * Use the **Details**, **Compose**, and **Environment** stack workspace to inspect and edit supported stacks.
-* Use **Pull Image & Redeploy** to pull images and recreate services.
+* Use **Pull Image & Redeploy** to pull images and recreate services, or **Delete Stack** in the stack menu to remove a stack.
 * Start, stop, and restart containers; read logs; and open container terminals.
 * Review recent Docker events, manage registries and Git credentials, and browse or prune environment images.
 
@@ -80,6 +80,7 @@ Available operations depend on your account permissions, server configuration, a
 * Browse engine images and prune unused images after confirmation.
 * Open **Details**, **Compose**, and **Environment** for a Compose project. The Docker API alone cannot directly edit Compose or environment files; use **Add Host Access** to enable file access over SSH.
 * With host access, fetch and edit existing host files, save changes, and use **Redeploy** or **Pull Image & Redeploy** to apply them.
+* Choose **Delete Stack** from the stack menu to remove its containers and project networks, keeping volumes and images. With host access and readable project files, you can also select the option to delete the listed Compose/environment files. Files are kept by default.
 * Tap the terminal icon in the service title bar to open the associated host's SSH shell.
 
 **Pull Images & Restart** downloads images and restarts running containers with their existing configuration and creation-time images. To apply updated images or saved Compose changes, use a Compose redeployment.
@@ -90,6 +91,7 @@ Available operations depend on your account permissions, server configuration, a
 * Tap the terminal icon in the service title bar to open a shell on the host. Container terminal buttons open shells inside running containers.
 * Use **Add Stack** to deploy an existing Compose file on the host.
 * Edit existing Compose and environment files in the stack workspace, then redeploy to apply changes.
+* Choose **Delete Stack** from the stack menu to remove containers and project networks even if the Compose file is missing. Volumes and images are kept. If the project files are available, an optional checkbox lets you review and delete the listed Compose/environment files; other host files and directories are kept.
 * Set a **Root Directory** for Compose projects; the default is `/srv/stacks`. Change it through **Root Directory** in the service's three-dot menu or from Stack Details.
 * Start, stop, and restart containers, read logs, browse images, and review recent events.
 
@@ -98,6 +100,7 @@ The SSH account needs permission to run Docker and Docker Compose v2. Editing fi
 ### Across the App
 
 * Long-press and drag dashboard service cards to change their order. Release to save the order for future app launches.
+* Return from a stack to the same position in its list. Each service tab keeps its own scroll position while you browse. Tap a tab to go directly to it, or swipe between neighboring tabs.
 * Pull down to refresh service information. Existing status and content stay visible during background refreshes.
 * Container logs refresh automatically every five seconds, with manual refresh and 100, 500, or 1,000-line views.
 * Add/Edit Service forms keep the Connect or Save button below the scrollable fields and above the keyboard. A centered spinner appears while the request is in progress.
