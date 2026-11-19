@@ -4,6 +4,12 @@ All notable changes and releases for Stacks are documented here. Stacks is distr
 
 ---
 
+## [0.0.7] - 2026-11-19
+
+* Bug Fixes & Optimizations
+
+---
+
 ## [0.0.6] - 2026-11-19
 
 * Added Delete Stack Option

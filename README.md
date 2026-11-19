@@ -169,6 +169,8 @@ Each Docker service has one associated SSH connection. Changing its Docker API e
 
 ### Common Solutions
 
+- In a stack's Compose tab, switch to **Raw** and tap **Format** to normalize YAML indentation to two spaces. Tap **Save** to apply the draft. If Format points to a line and column, correct the syntax there and try again.
+
 * **Connection timed out or endpoint unreachable:** Check your phone's network or VPN connection, the endpoint address and port, and the host firewall. Allow local network access if Android prompts you; if previously denied, enable it in Android app settings.
 * **Authentication failed:** Use the instance card's pencil button to check connection details. Confirm that API tokens are still valid and that your SSH account and key or password are correct. For Docker host access, use **Edit Host Access** in the service menu.
 * **Certificate or SSH host key changed:** Verify the new fingerprint against the server before updating saved connection details.
