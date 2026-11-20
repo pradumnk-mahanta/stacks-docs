@@ -75,7 +75,15 @@ For both Docker API and SSH, **Delete Stack** removes the project’s containers
 - Tap or swipe between service tabs. Pull down to refresh while the last known status stays visible. If Stacks is still waiting for the first status result, the card shows **Checking**.
 - Container logs refresh every five seconds. You can also refresh them yourself and choose to see the last 100, 500, or 1,000 lines.
 - To change your terminal shortcuts, open **Settings > Quick Commands** or scroll to the end of the terminal shortcuts and tap the pencil. Put one command on each line and tap **Save**. Tap a shortcut in the terminal to run it.
-- In **Settings**, pick Light or Dark mode, show or hide service logos, or export and import a JSON settings backup. Check **About** for your app version, **Credits** for project links, and **Feedback & Support** to report a problem or suggest a feature.
+- In **Settings**, pick Light or Dark mode or export and import a JSON settings backup. Check **About** for your app version, **Credits** for project links, and **Feedback & Support** to report a problem or suggest a feature.
+
+### Premium Access
+
+Open **Settings > Premium Access > Get Premium Access** to see purchase options on Google Play. If you’ve already purchased, use **Restore purchases** with the Google Play account you used to buy it.
+
+Premium unlocks custom terminal shortcuts, Compose and environment editing in Table mode, YAML formatting in Raw mode, adding registries and Git providers in Komodo and Portainer, and SSH host access for Docker API connections. You can still edit Compose and environment files in Raw mode wherever your connection supports it. Built-in terminal shortcuts and standalone SSH connections are available without Premium.
+
+With Premium, use **Settings > Show Service Logos** to display provider logos. Free accounts use generic service icons.
 
 ## Service Setup Guides
 
@@ -136,7 +144,7 @@ Host access is part of that Docker service on the dashboard. Choose **Edit Host 
 - **Host access points to a different engine.** Check which Docker engine the SSH account is using. It must be the one you added through the Docker API.
 - **The host terminal button is unavailable.** Finish setting up SSH authentication and verify the host key.
 - **A Docker container terminal fails through a reverse proxy.** Check that the proxy forwards the connection upgrade.
-- **The Compose editor flags a YAML error.** Switch to **Raw** and tap **Format** to use two-space indentation. If it points to a line and column, fix the syntax there and try again. Tap **Save** when you’re done.
+- **The Compose editor flags a YAML error.** Switch to **Raw** and tap **Format** to use two-space indentation while keeping your blank lines. If it points to a line and column, fix the syntax there and try again. Tap **Save** when you’re done.
 - **The file changed while you were editing.** Reload it and review your edits against the latest copy before saving again.
 - **You pulled an image but the container is still on the old version.** Redeploy to recreate the container with the new image. Use **Pull Image & Redeploy** with SSH host access, or redeploy through Komodo or Portainer.
 
@@ -146,7 +154,7 @@ Found a bug or missing a feature? Open an issue and include your Android version
 
 ## Privacy & Terms
 
-Stacks has no ads or analytics. Settings, credentials, and cached service information stay on your device. Android Keystore protects your saved credentials, and Stacks sends authentication details only when needed to connect to the services you configure. Connections go directly to your servers.
+Stacks has no ads or analytics. Settings, credentials, and cached service information stay on your device. Android Keystore protects your saved credentials, and Stacks sends authentication details only when needed to connect to the services you configure. Connections go directly to your servers. Google Play handles Premium purchases and reports purchase status to the app.
 
 Settings backups leave out credentials, private keys, saved certificate and SSH host trust, and terminal quick commands. On a new device, sign in again and verify your certificates or host keys. [Privacy Policy](PRIVACY_POLICY.md)
 

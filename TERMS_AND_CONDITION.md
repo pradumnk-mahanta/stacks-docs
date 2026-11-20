@@ -13,7 +13,8 @@ By downloading, installing, or using Stacks, you agree to be bound by these Term
 
 * **Infrastructure Client Utility:** Stacks is a native Android client application designed to interface with user-supplied container and server management infrastructure (such as Komodo, Portainer, and Docker).
 * **No Cloud Hosting Provided:** Stacks does **NOT** provide, host, or operate any servers, containers, compute resources, or backend infrastructure. You are solely responsible for provisioning, operating, maintaining, and securing your own server environments and container deployments.
-* **Direct Connections:** All communication occurs directly between your Android device and the endpoints you explicitly configure.
+* **Direct Connections:** Infrastructure requests go directly from your Android device to the endpoints you configure.
+* **Premium Access:** Google Play handles purchases for Stacks. The purchase screen shows the applicable price and renewal terms. Manage or cancel recurring subscriptions through Google Play. The Lifetime product is a one-time purchase.
 
 ---
 

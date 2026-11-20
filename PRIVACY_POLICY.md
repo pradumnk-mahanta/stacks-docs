@@ -38,6 +38,7 @@ You may completely erase all locally stored data at any time by clearing the app
 
 * **Direct Infrastructure Connections:** When you connect to an instance, your device establishes a direct network connection (HTTP, HTTPS, or SSH) to the host endpoint specified by you (e.g. via local Wi-Fi, WireGuard, Tailscale, or reverse proxy). Stacks acts purely as a direct client; no requests are proxied, inspected, or routed through any intermediary servers.
 * **Self-Hosted Security:** You are responsible for ensuring that your server endpoints use appropriate transport security and strong access credentials.
+* **Premium Purchases:** Google Play processes payments and reports purchase status to the app so Stacks can unlock Premium and restore purchases. The Play Billing integration does not send your server addresses, credentials, or project files to Google Play. Google handles payment and account data under its own privacy policy.
 
 ---
 
@@ -47,6 +48,7 @@ Stacks requests only the minimal permissions necessary for core container manage
 
 * `INTERNET`: Required to connect directly to user-configured server endpoints and WebSocket terminal sessions.
 * `ACCESS_NETWORK_STATE`: Required to detect network availability and provide connection status indicators.
+* `com.android.vending.BILLING`: Lets Stacks check and acknowledge Premium purchases through Google Play.
 
 ---
 
