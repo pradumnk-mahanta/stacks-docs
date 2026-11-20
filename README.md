@@ -85,6 +85,8 @@ Premium unlocks custom terminal shortcuts, Compose and environment editing in Ta
 
 With Premium, use **Settings > Show Service Logos** to display provider logos. Free accounts use generic service icons.
 
+In the Compose table, tap the pencil beside a key to rename it. For service, network, and named volume names, Stacks previews the references it can update in the current file before you apply the change.
+
 ## Service Setup Guides
 
 ### Connecting Komodo
