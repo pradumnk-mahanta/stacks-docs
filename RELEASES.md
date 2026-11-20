@@ -4,6 +4,12 @@ All notable changes and releases for Stacks are documented here. Stacks is distr
 
 ---
 
+## [0.0.8] - 2026-11-20
+
+* Added Support for Custom Commands
+
+---
+
 ## [0.0.7] - 2026-11-19
 
 * Bug Fixes & Optimizations

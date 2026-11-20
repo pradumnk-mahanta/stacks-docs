@@ -1,218 +1,153 @@
 <p align="center">
-  <img src="assets/playstore-listing/logo.png" alt="Stacks Logo" width="128" height="128" />
+  <img src="assets/playstore-listing/logo.png" alt="Stacks logo" width="128" height="128" />
 </p>
 
 <h1 align="center">Stacks</h1>
 
-<p align="center">
-  <strong>Native Android management for self-hosted container infrastructure.</strong><br>
-  Monitor, manage, and orchestrate Komodo, Portainer, and Docker engines directly from your phone.
-</p>
+<p align="center">Manage your Docker stacks from an Android phone.</p>
 
 <p align="center">
-  <a href="#overview">Overview</a> •
-  <a href="#supported-services">Supported Services</a> •
-  <a href="#features-by-service">Features</a> •
-  <a href="#service-setup-guides">Setup Guides</a> •
-  <a href="#troubleshooting--raising-issues">Troubleshooting & Issues</a> •
-  <a href="#privacy--terms">Privacy & Terms</a>
+  <a href="#supported-services">Supported services</a> ·
+  <a href="#service-setup-guides">Setup</a> ·
+  <a href="#troubleshooting--raising-issues">Troubleshooting</a> ·
+  <a href="#privacy--terms">Privacy &amp; Terms</a>
 </p>
-
----
 
 ## Overview
 
-**Stacks** lets you manage Komodo, Portainer, Docker engines, and SSH hosts from your Android phone. Browse servers and stacks, manage containers, read logs, open terminals, and edit supported Compose and environment files.
+Open Stacks to see which services are online, check why a container stopped, or pull up a shell. You can keep your Komodo, Portainer, Docker API, and SSH connections on one dashboard.
 
-Stacks requires **Android 12 or later**. Your phone connects directly to the endpoints you configure, using your local network, VPN, or reverse proxy. There is no Stacks cloud account or relay.
-
-### Key Highlights
-
-* **Multiple services:** Keep Komodo, Portainer, Docker API, and SSH connections together on one dashboard. Add multiple Docker engines, each with its own optional SSH host access.
-* **Background refresh:** Keep the last known Online or Offline status visible while a connection refreshes. A connection without a previous result shows Checking during its first check.
-* **Container tools:** Start, stop, restart, read logs, and open terminals where supported.
-* **Stack workspaces:** Switch between Details, Compose, and Environment to inspect and manage your stacks.
-* **Private settings:** Credentials are encrypted on your device. Stacks does not collect analytics or telemetry.
-* **Appearance:** Choose Light or Dark mode in Settings and toggle service logos.
-
----
+You’ll need **Android 12 or later**. Your phone connects straight to the addresses you enter, over your local network, a VPN, or a reverse proxy. There’s no Stacks account to set up.
 
 ## Supported Services
 
-| Service | Connection Scope | Available Tools |
-| :--- | :--- | :--- |
-| **Komodo** | Multiple servers per connection | Server monitoring, tags, stack deployment and editing, container tools, operation history, procedures, actions, Git provider accounts, registries, and images. |
-| **Portainer** | Multiple environments per connection | Environment overview, stack deployment and editing, container tools, recent events, registries, Git credentials, and images. |
-| **Docker API** | Multiple saved connections, one engine per connection | Engine overview, Compose project grouping, container tools, recent events, and images. Add one SSH host-access connection per engine for host terminals and Compose/environment file editing. |
-| **SSH Connection** | One host per connection | Docker overview, container tools, recent events, images, a host terminal, and deployment and editing of existing Compose files. |
+| Service | What you can connect |
+| --- | --- |
+| **Komodo** | One connection covers the servers managed by that Komodo instance. |
+| **Portainer** | One connection covers the environments managed by that Portainer instance. |
+| **Docker API** | Add each Docker engine separately. You can pair each engine with one SSH connection for host files and a host shell. |
+| **SSH Connection** | Add each host separately to use its shell and manage Docker and Compose. |
 
-Available operations depend on your account permissions, server configuration, and access to the relevant files.
-
----
+What you can do on a particular server depends on your account permissions and the files it can access.
 
 ## Features by Service
 
 ### Komodo
 
-* Monitor server CPU, memory, storage, and tags. Select a server to filter its stacks.
-* Browse stacks, edit tags, and use Start, Restart, and Stop controls. Choose **Delete Stack** in the stack menu to remove it from Komodo; **Destroy** remains available to take it down without deleting its record.
-* Create stacks using templates, UI-defined Compose, Git repositories, or host files.
-* Open a stack's **Details**, **Compose**, and **Environment** tabs. Edit Compose in Table or Raw mode, format YAML, and edit environment variables with values hidden by default.
-* Check for stack updates and run supported update or deployment actions.
-* Start, stop, and restart containers. Open container logs or choose a `sh`, `bash`, or attach terminal session.
-* Review operation history and detailed execution output.
-* Run configured procedures and actions, manage Git provider and registry accounts, and browse or prune host images.
+Pick a server to see its CPU, memory, storage, tags, and stacks. You can create a stack from a template, write Compose in the app, use a Git repository, or point to files already on the host.
+
+- Open a stack’s **Compose** or **Environment** tab to edit it. Compose has Table and Raw modes and a YAML formatter. Environment values are hidden by default.
+- For a Git-backed stack, tap refresh in **Compose** to compare the upstream files with the last deployed copies. You can check for changes while the stack keeps running.
+- Start, restart, or stop a stack, check for image updates, or deploy it. Choose **Destroy** to take a stack down and keep its Komodo record, or **Delete Stack** to remove the record.
+- Start, stop, or restart a container, read its logs, or open `sh`, `bash`, or an attach session.
+- Review operation history, run configured procedures and actions, manage Git provider and registry accounts, and browse or prune host images.
 
 ### Portainer
 
-* Browse environments and their available CPU, memory, and container information. Select an environment to filter stacks.
-* Create stacks from UI-defined Compose or a Git repository, including repository authentication when needed.
-* Use the **Details**, **Compose**, and **Environment** stack workspace to inspect and edit supported stacks.
-* Use **Pull Image & Redeploy** to pull images and recreate services, or **Delete Stack** in the stack menu to remove a stack.
-* Start, stop, and restart containers; read logs; and open container terminals.
-* Review recent Docker events, manage registries and Git credentials, and browse or prune environment images.
+Pick an environment to see its stacks and available CPU, memory, and container information. Create a stack from Compose you write in the app or from a Git repository.
+
+- Use **Details**, **Compose**, and **Environment** to inspect a stack and edit the fields Portainer supports.
+- On a Git-backed stack, tap refresh in **Compose** to compare the main file with the deployed copy. The read-only preview lets you see what’s upstream without redeploying. Older private repositories may ask for Git credentials for that check.
+- Use **Pull Image & Redeploy** to pull images and recreate services, or **Delete Stack** to remove a stack.
+- Start, stop, or restart containers, open their logs or terminals, view Docker events, manage registries and Git credentials, and browse or prune images.
 
 ### Docker API
 
-* Add multiple engines as separate services, each with its own alias, endpoint, credentials, and optional SSH host access.
-* View engine capacity, recent events, Compose projects, and standalone containers.
-* Start, stop, and restart containers, read logs, and open `sh` or `bash` terminals in running containers.
-* Browse engine images and prune unused images after confirmation.
-* Open **Details**, **Compose**, and **Environment** for a Compose project. The Docker API alone cannot directly edit Compose or environment files; use **Add Host Access** to enable file access over SSH.
-* With host access, fetch and edit existing host files, save changes, and use **Redeploy** or **Pull Image & Redeploy** to apply them.
-* Choose **Delete Stack** from the stack menu to remove its containers and project networks, keeping volumes and images. With host access and readable project files, you can also select the option to delete the listed Compose/environment files. Files are kept by default.
-* Tap the terminal icon in the service title bar to open the associated host's SSH shell.
+Open an engine to see its capacity, recent events, Compose projects, standalone containers, and images. You can start, stop, and restart containers, read their logs, open `sh` or `bash` in running containers, and prune unused images after confirming.
 
-**Pull Images & Restart** downloads images and restarts running containers with their existing configuration and creation-time images. To apply updated images or saved Compose changes, use a Compose redeployment.
+If you want to edit a project’s Compose or environment files, use **Add Host Access** to connect over SSH. Once it’s set up, open the project’s **Compose** or **Environment** tab to edit existing files. Save your changes, then use **Redeploy** or **Pull Image & Redeploy** when you’re ready. The terminal icon in the Docker service’s title bar opens a shell on the host.
+
+**Pull Images & Restart** downloads images and restarts the running containers with their existing configuration and images. Use a Compose redeploy to apply a new image or a saved Compose change.
 
 ### SSH Connection
 
-* Manage Docker and Compose on a host using your SSH account.
-* Tap the terminal icon in the service title bar to open a shell on the host. Container terminal buttons open shells inside running containers.
-* Use **Add Stack** to deploy an existing Compose file on the host.
-* Edit existing Compose and environment files in the stack workspace, then redeploy to apply changes.
-* Choose **Delete Stack** from the stack menu to remove containers and project networks even if the Compose file is missing. Volumes and images are kept. If the project files are available, an optional checkbox lets you review and delete the listed Compose/environment files; other host files and directories are kept.
-* Set a **Root Directory** for Compose projects; the default is `/srv/stacks`. Change it through **Root Directory** in the service's three-dot menu or from Stack Details.
-* Start, stop, and restart containers, read logs, browse images, and review recent events.
+Use your SSH account to manage Docker on a host. You can see recent events and images, and start, stop, restart, or read logs for containers. The terminal icon in the service’s title bar opens a host shell. A container’s terminal icon opens a shell inside that container.
 
-The SSH account needs permission to run Docker and Docker Compose v2. Editing files also requires SFTP access and permission to read and write those files.
+Use **Add Stack** to deploy an existing Compose file. To change a stack, open its **Compose** or **Environment** tab, edit the files, and redeploy when ready. Stacks looks for projects under the **Root Directory**, which defaults to `/srv/stacks`. You can change it in the service’s three-dot menu or under **Stack Details**.
+
+Your SSH account needs permission to run Docker and Docker Compose v2. File editing also needs SFTP access and permission to read and write the project files.
+
+For both Docker API and SSH, **Delete Stack** removes the project’s containers and networks, even if its Compose file is missing. Stacks keeps volumes and images. If the files are accessible over SSH, you can also choose to delete the Compose and environment files listed in the confirmation. The files are kept by default.
 
 ### Across the App
 
-* Long-press and drag dashboard service cards to change their order. Release to save the order for future app launches.
-* Return from a stack to the same position in its list. Each service tab keeps its own scroll position while you browse. Tap a tab to go directly to it, or swipe between neighboring tabs.
-* Pull down to refresh service information. Existing status and content stay visible during background refreshes.
-* Container logs refresh automatically every five seconds, with manual refresh and 100, 500, or 1,000-line views.
-* Add/Edit Service forms keep the Connect or Save button below the scrollable fields and above the keyboard. A centered spinner appears while the request is in progress.
-* Open **Settings > Feedback & Support** for documentation, bug reports, and feature requests. **About** shows your installed app version, and **Credits** links to the Docker, Komodo, and Portainer projects.
-* Export service settings and preferences to a JSON backup and import them from Settings. Backups exclude credentials, private keys, and saved host/certificate trust. On a new device, reconnect services and verify their hosts or certificates again.
-
----
+- Hold and drag a service card to move it. Stacks remembers the order and keeps your place in service lists as you browse.
+- Tap or swipe between service tabs. Pull down to refresh while the last known status stays visible. If Stacks is still waiting for the first status result, the card shows **Checking**.
+- Container logs refresh every five seconds. You can also refresh them yourself and choose to see the last 100, 500, or 1,000 lines.
+- To change your terminal shortcuts, open **Settings > Quick Commands** or scroll to the end of the terminal shortcuts and tap the pencil. Put one command on each line and tap **Save**. Tap a shortcut in the terminal to run it.
+- In **Settings**, pick Light or Dark mode, show or hide service logos, or export and import a JSON settings backup. Check **About** for your app version, **Credits** for project links, and **Feedback & Support** to report a problem or suggest a feature.
 
 ## Service Setup Guides
 
 ### Connecting Komodo
 
-1. Tap **+** on the dashboard, then choose **Komodo**.
-2. Enter a **Server Alias** and **Komodo Endpoint**, such as `http://192.168.1.100:9120` or `https://komodo.example.com`.
-3. Choose an authentication method:
-   * **Username & Password:** Enter your Komodo account details. If two-factor authentication is enabled, enter the six-digit code when prompted. Stacks creates a dedicated connection key after sign-in so it does not need to store your account password.
-   * **API Key & Secret:** Create a dedicated key in your Komodo profile's API key settings, then enter its key and secret.
-4. Tap **Connect** and allow local network access if Android prompts you.
+1. Tap **+** on the dashboard and choose **Komodo**.
+2. Give the connection a **Server Alias** and enter the **Komodo Endpoint**, for example `http://192.168.1.100:9120` or `https://komodo.example.com`.
+3. Choose how to sign in.
+   - **Username & Password** uses your Komodo account. Enter the six-digit code if two-factor authentication is enabled. After you sign in, Stacks tries to create a dedicated key for future connections.
+   - **API Key & Secret** uses credentials you create in your Komodo profile’s API key settings. Paste both into Stacks.
+4. Tap **Connect**. If Android asks for local network access, allow it so Stacks can reach a server on your LAN.
 
 ### Connecting Portainer
 
-1. In Portainer, open **My account**, find **Access tokens**, and create a token for Stacks. Copy the token when it is shown.
+1. In Portainer, go to **My account > Access tokens**. Create a token for Stacks and copy it when it’s shown.
 2. In Stacks, tap **+** and choose **Portainer**.
-3. Enter a **Server Alias**, **Portainer Endpoint** (for example, `https://192.168.1.100:9443`), and the **Access token**.
-4. For a self-signed or private-CA HTTPS endpoint, enter the verified server certificate fingerprint in **Certificate SHA-256 fingerprint** if needed.
+3. Enter a **Server Alias**, the **Portainer Endpoint** (for example, `https://192.168.1.100:9443`), and your **Access token**.
+4. If your HTTPS endpoint uses a self-signed or private-CA certificate, enter its verified **Certificate SHA-256 fingerprint** if Android doesn’t already trust it.
 5. Tap **Connect** and allow local network access if prompted.
 
 ### Connecting Docker API
 
-1. Make your Docker API reachable from your phone through a trusted network, VPN, or secured reverse proxy. Use TLS and authentication for access over untrusted networks.
+1. Make sure your phone can reach the Docker API over a trusted network, VPN, or secured reverse proxy. Use TLS and authentication over untrusted networks.
 2. In Stacks, tap **+** and choose **Docker API**.
-3. Enter a **Server Alias** and **Docker Endpoint**, such as `https://docker.example.com:2376`.
-4. Choose an authentication method:
-   * **Client certificate:** Install your client certificate and private key in Android's credential settings, then tap **Choose certificate** in Stacks.
-   * **Proxy bearer token:** Enter the token required by your HTTPS reverse proxy.
-   * **None:** Use only when your endpoint is protected by a trusted private network or another appropriate access control.
-5. If needed, enter the verified HTTPS server certificate fingerprint in **Certificate SHA-256 fingerprint**.
-6. Tap **Connect**. Repeat these steps to add another engine.
+3. Enter a **Server Alias** and a **Docker Endpoint**, for example `https://docker.example.com:2376`.
+4. Choose the authentication your endpoint expects.
+   - **Client certificate** uses a certificate and private key installed in Android’s credential settings. Tap **Choose certificate** to select it.
+   - **Proxy bearer token** uses the token required by your HTTPS reverse proxy.
+   - **None** is for endpoints already protected by a trusted private network or another access control.
+5. If needed, enter the verified **Certificate SHA-256 fingerprint** for the HTTPS endpoint.
+6. Tap **Connect**. Repeat for each engine you want to add.
 
 #### Adding SSH Host Access to a Docker Engine
 
-Host access belongs to the selected Docker engine and does not create a separate dashboard service.
+1. Open the Docker service’s three-dot menu and choose **Add Host Access**. You can also reach it from **Compose** or **Environment**.
+2. Enter the **SSH Endpoint**, **Username**, and **Root Directory**. Leave `/srv/stacks` as the root if that’s where you keep your projects.
+3. Choose **Password**, **Private key**, or **No authentication**. Paste a private key or pick a key file, and enter its passphrase if it has one. **No authentication** requires a server that accepts an unauthenticated session or an empty password.
+4. Enter the verified **Host key SHA-256 fingerprint** or compare the fingerprint shown on first connection with your server’s known host key before trusting it.
+5. Tap **Save Host Access**. The SSH account needs to reach the same Docker engine as your API connection and have access to the project files.
 
-1. Open the Docker service and choose **Add Host Access** from its three-dot menu. You can also use the button in its Compose or Environment tab.
-2. Enter the **SSH Endpoint**, **Username**, and **Root Directory**. For projects under `/srv/stacks`, leave the default root or enter your host's actual directory.
-3. Choose **Password**, **Private key**, or **No authentication**. For a private key, paste it or choose a key file and enter its passphrase if required. No authentication only works when the SSH server accepts an unauthenticated session or an empty password.
-4. Enter a verified **Host key SHA-256 fingerprint**, or compare the fingerprint presented on first connection with your server's known host key before trusting it.
-5. Tap **Save Host Access**. The SSH account must target the same Docker engine as this API connection and have access to the project files.
-6. Open a stack's **Compose** or **Environment** tab to load its files. Save edits, then redeploy when you want to apply them.
-7. Tap the terminal icon in the service title bar to open a host shell. Use **Edit Host Access** in the three-dot menu to change the connection later.
-
-Each Docker service has one associated SSH connection. Changing its Docker API endpoint clears the previous host-access association; configure host access for the new endpoint again.
+Host access is part of that Docker service on the dashboard. Choose **Edit Host Access** in the three-dot menu to change it. If you change the Docker API endpoint, set up host access again for the new engine.
 
 ### Connecting SSH
 
-1. Tap **+** on the dashboard and choose **SSH Connection**.
-2. Enter a **Server Alias**, **SSH Endpoint** (such as `ssh://192.168.1.100:22`), **Username**, and **Root Directory**.
-3. Choose **Password**, **Private key**, or **No authentication**, and supply the required credentials. No authentication requires a server that accepts an unauthenticated session or an empty password.
-4. Enter a verified **Host key SHA-256 fingerprint**, or compare and trust the presented fingerprint on first connection.
-5. Tap **Connect**. The account must be able to run Docker on that host.
-6. Open the service to manage containers and stacks, or tap its title-bar terminal icon to open a host shell.
-
----
+1. Tap **+** and choose **SSH Connection**.
+2. Enter a **Server Alias**, **SSH Endpoint** (for example, `ssh://192.168.1.100:22`), **Username**, and **Root Directory**.
+3. Choose **Password**, **Private key**, or **No authentication**. Use **No authentication** only with a server that accepts an unauthenticated session or an empty password.
+4. Enter a verified **Host key SHA-256 fingerprint**, or verify the fingerprint shown on first connection against your server’s known host key.
+5. Tap **Connect**. Open the service to manage its stacks and containers, or tap the terminal icon for a host shell.
 
 ## Troubleshooting & Raising Issues
 
-### Common Solutions
+- **Stacks can’t reach the server.** Check your Wi-Fi or VPN, the endpoint address and port, and the server firewall. If you previously denied local network access, you can enable it in Android’s app settings.
+- **Sign-in failed.** Tap the pencil on the service card to check the connection details. Make sure your token is still valid or your SSH username, key, or password is correct. For Docker host access, use **Edit Host Access** instead.
+- **The certificate or SSH host key changed.** Verify the new fingerprint against your server before updating the connection.
+- **The Compose or Environment tab asks for host access.** Open the Docker service menu and tap **Add Host Access** to give Stacks an SSH connection for the project files.
+- **A Compose or environment file is missing.** Check the **Root Directory**, file location, and SSH permissions. If Komodo or Portainer keeps the file in its own data volume, use that service’s editor or make the file accessible to the SSH account, then tap **Reload**.
+- **Host access points to a different engine.** Check which Docker engine the SSH account is using. It must be the one you added through the Docker API.
+- **The host terminal button is unavailable.** Finish setting up SSH authentication and verify the host key.
+- **A Docker container terminal fails through a reverse proxy.** Check that the proxy forwards the connection upgrade.
+- **The Compose editor flags a YAML error.** Switch to **Raw** and tap **Format** to use two-space indentation. If it points to a line and column, fix the syntax there and try again. Tap **Save** when you’re done.
+- **The file changed while you were editing.** Reload it and review your edits against the latest copy before saving again.
+- **You pulled an image but the container is still on the old version.** Redeploy to recreate the container with the new image. Use **Pull Image & Redeploy** with SSH host access, or redeploy through Komodo or Portainer.
 
-- In a stack's Compose tab, switch to **Raw** and tap **Format** to normalize YAML indentation to two spaces. Tap **Save** to apply the draft. If Format points to a line and column, correct the syntax there and try again.
+### Reporting an Issue
 
-* **Connection timed out or endpoint unreachable:** Check your phone's network or VPN connection, the endpoint address and port, and the host firewall. Allow local network access if Android prompts you; if previously denied, enable it in Android app settings.
-* **Authentication failed:** Use the instance card's pencil button to check connection details. Confirm that API tokens are still valid and that your SSH account and key or password are correct. For Docker host access, use **Edit Host Access** in the service menu.
-* **Certificate or SSH host key changed:** Verify the new fingerprint against the server before updating saved connection details.
-* **Compose or Environment says host connectivity is required:** Open the Docker service's three-dot menu and choose **Add Host Access**. Docker API access alone does not provide access to host project files.
-* **Compose or Environment file not found:** Check Root Directory, the actual file locations, and the SSH account's file permissions. Files managed by Portainer or Komodo may be stored in that service's data volume rather than at a directly accessible host path. Use the managing service's editor or make the project files accessible on the SSH host, then choose **Reload**.
-* **Host access targets a different engine:** Check that the SSH account's Docker connection targets the same engine as the selected Docker API service.
-* **Host terminal button is unavailable:** Complete SSH authentication and host-key verification for the service or its associated host access.
-* **Docker container terminal will not connect through a reverse proxy:** Ensure the proxy forwards the Docker terminal connection upgrade.
-* **A file changed before saving:** Reload it and review your changes against the latest host copy before saving again.
-* **Images were pulled but containers still use the old version:** Restarting does not recreate containers. Use **Pull Image & Redeploy** through SSH host access, or redeploy through Komodo or Portainer.
-
-### How to Raise an Issue
-
-Report bugs or request features through the **[GitHub issue tracker](https://github.com/pradumnk-mahanta/stacks-docs/issues)**.
-
-Include:
-
-1. Your Android version and device model.
-2. The service name and version.
-3. Whether you connect over local Wi-Fi, a VPN, or a reverse proxy.
-4. What you expected, what happened, and the steps to reproduce it.
-5. The on-screen error message, with private details removed.
-
-Never include passwords, API keys, tokens, private keys, or other secrets in issue reports or screenshots.
-
----
+Found a bug or missing a feature? Open an issue and include your Android version and device model, which service you’re using and its version, and whether you connect over local Wi-Fi, a VPN, or a reverse proxy. For bugs, tell us what you expected, what happened, and how to reproduce it. An on-screen error or screenshot can help once you’ve removed passwords, tokens, keys, and other private details. [GitHub issue tracker](https://github.com/pradumnk-mahanta/stacks-docs/issues)
 
 ## Privacy & Terms
 
-### Privacy Summary
+Stacks has no ads or analytics. Settings, credentials, and cached service information stay on your device. Android Keystore protects your saved credentials, and Stacks sends authentication details only when needed to connect to the services you configure. Connections go directly to your servers.
 
-* Stacks does not collect analytics or telemetry and has no advertising.
-* Settings, credentials, and cached service information are stored on your Android device. Credentials are encrypted using Android Keystore protection.
-* Connections go to the server endpoints you choose. Authentication details are sent only as required to connect to those services; Stacks does not operate a cloud relay.
-* Portable backups exclude credentials, private keys, and saved host/certificate trust.
+Settings backups leave out credentials, private keys, saved certificate and SSH host trust, and terminal quick commands. On a new device, sign in again and verify your certificates or host keys. [Privacy Policy](PRIVACY_POLICY.md)
 
-Read the full **[Privacy Policy](PRIVACY_POLICY.md)**.
-
-### Terms Summary
-
-* Stacks is a client for infrastructure you provide and authorize it to access.
-* You are responsible for securing endpoints, maintaining backups, and reviewing server actions such as redeployment, removal, and image pruning.
-* Stacks is provided as is, without warranties.
-
-Read the full **[Terms and Conditions](TERMS_AND_CONDITION.md)**.
+Use Stacks with infrastructure you’re authorized to access. You’re responsible for securing your endpoints, keeping backups, and reviewing actions like redeploying stacks, deleting resources, and pruning images. Stacks is provided as is, without warranties. [Terms and Conditions](TERMS_AND_CONDITION.md)
