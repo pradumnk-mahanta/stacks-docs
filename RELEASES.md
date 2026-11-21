@@ -4,6 +4,12 @@ All notable changes and releases for Stacks are documented here. Stacks is distr
 
 ---
 
+## [0.1.0] - 2026-11-21
+
+* Bug Fixes & UI Improvements
+
+---
+
 ## [0.0.10] - 2026-11-20
 
 * Updated Docker Compose Table UI

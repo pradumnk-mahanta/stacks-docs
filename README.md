@@ -7,6 +7,7 @@
 <p align="center">Manage your Docker stacks from an Android phone.</p>
 
 <p align="center">
+  <a href="#screenshots">Screenshots</a> ·
   <a href="#supported-services">Supported services</a> ·
   <a href="#service-setup-guides">Setup</a> ·
   <a href="#troubleshooting--raising-issues">Troubleshooting</a> ·
@@ -18,6 +19,19 @@
 Open Stacks to see which services are online, check why a container stopped, or pull up a shell. You can keep your Komodo, Portainer, Docker API, and SSH connections on one dashboard.
 
 You’ll need **Android 12 or later**. Your phone connects straight to the addresses you enter, over your local network, a VPN, or a reverse proxy. There’s no Stacks account to set up.
+
+## Screenshots
+
+<p align="center">
+  <img src="assets/playstore-listing/screenshot_dashboard.png" alt="Connected services dashboard" width="220" />
+  <img src="assets/playstore-listing/screenshot_service.png" alt="Service workspace and servers" width="220" />
+  <img src="assets/playstore-listing/screenshot_stacks.png" alt="Stacks list with lifecycle controls" width="220" />
+</p>
+<p align="center">
+  <img src="assets/playstore-listing/screenshot_add_service.png" alt="Add Service provider selection" width="220" />
+  <img src="assets/playstore-listing/screenshot_updates.png" alt="Updates tab" width="220" />
+  <img src="assets/playstore-listing/screenshot_manage.png" alt="Manage tab" width="220" />
+</p>
 
 ## Supported Services
 
@@ -79,9 +93,11 @@ For both Docker API and SSH, **Delete Stack** removes the project’s containers
 
 ### Premium Access
 
-Open **Settings > Premium Access > Get Premium Access** to see purchase options on Google Play. If you’ve already purchased, use **Restore purchases** with the Google Play account you used to buy it.
+Open **Settings > Premium Access > Get Premium Access** to see available Google Play plans in the app. Select a plan to open Google Play checkout. If you’ve already purchased, use **Restore purchases** with the Google Play account you used to buy it.
 
 Premium unlocks custom terminal shortcuts, Compose and environment editing in Table mode, YAML formatting in Raw mode, adding registries and Git providers in Komodo and Portainer, and SSH host access for Docker API connections. You can still edit Compose and environment files in Raw mode wherever your connection supports it. Built-in terminal shortcuts and standalone SSH connections are available without Premium.
+
+Use **Settings > Credentials** with Premium to reveal or update credentials for each saved service, including SSH host access. When adding a service, choose an authentication method and enter the endpoint, then use **Use saved credentials** if a compatible credential is available. Stacks verifies the connection before saving.
 
 With Premium, use **Settings > Show Service Logos** to display provider logos. Free accounts use generic service icons.
 
